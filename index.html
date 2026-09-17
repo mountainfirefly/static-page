@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI & Product Engineering — Case Studies</title>
+<style>
+  :root { --ink:#17202a; --muted:#65717d; --line:#dfe5ea; --soft:#f5f7f9; --accent:#315efb; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color:var(--ink); background:white; line-height:1.55; }
+  .wrap { max-width:1100px; margin:auto; padding:0 28px; }
+  header { padding:90px 0 70px; border-bottom:1px solid var(--line); }
+  .eyebrow { text-transform:uppercase; letter-spacing:.12em; font-size:12px; font-weight:700; color:var(--accent); }
+  h1 { font-size:clamp(42px,6vw,72px); line-height:1.02; letter-spacing:-.045em; margin:18px 0 24px; max-width:850px; }
+  .lead { font-size:21px; color:var(--muted); max-width:760px; }
+  .proof { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); margin-top:55px; border:1px solid var(--line); }
+  .proof div { background:white; padding:22px; }
+  .proof strong { display:block; font-size:25px; margin-bottom:3px; }
+  .proof span { color:var(--muted); font-size:14px; }
+  section { padding:75px 0; border-bottom:1px solid var(--line); }
+  h2 { font-size:38px; letter-spacing:-.03em; margin:0 0 12px; }
+  .section-lead { color:var(--muted); max-width:700px; margin-bottom:42px; }
+  .case { padding:42px 0; border-top:1px solid var(--line); }
+  .case:first-of-type { border-top:0; }
+  .num { color:var(--accent); font-weight:800; font-size:13px; }
+  h3 { font-size:30px; letter-spacing:-.025em; margin:8px 0 6px; }
+  .meta { color:var(--muted); font-size:14px; margin-bottom:25px; }
+  .grid { display:grid; grid-template-columns:1.05fr .95fr; gap:45px; }
+  h4 { margin:24px 0 8px; font-size:15px; }
+  p { margin:8px 0 14px; }
+  ul { padding-left:20px; margin-top:8px; }
+  .quote { margin:28px 0 0; padding:22px 24px; background:var(--soft); border-left:3px solid var(--accent); font-weight:650; }
+  pre { background:#10151b; color:#e9edf2; padding:22px; overflow:auto; border-radius:8px; font-size:13px; line-height:1.7; }
+  .services { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+  .service { border:1px solid var(--line); padding:25px; }
+  .service h3 { font-size:22px; margin-top:0; }
+  .tags { color:var(--muted); font-size:13px; }
+  footer { padding:60px 0 90px; }
+  .cta { background:var(--ink); color:white; padding:42px; border-radius:10px; }
+  .cta p { color:#c8d0d8; max-width:700px; font-size:18px; }
+  @media(max-width:760px) {
+    .proof,.services,.grid { grid-template-columns:1fr; }
+    header { padding-top:55px; }
+    section { padding:55px 0; }
+    h2 { font-size:32px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="eyebrow">AI & Product Engineering</div>
+    <h1>AI systems that do real work.</h1>
+    <p class="lead">Case studies across AI decision systems, voice AI, generative interfaces, government platforms, data-heavy applications and high-traffic production software.</p>
+    <div class="proof">
+      <div><strong>AI</strong><span>RAG · agents · voice · generative UI</span></div>
+      <div><strong>Production</strong><span>Web · mobile · APIs · data</span></div>
+      <div><strong>Government</strong><span>Public-sector digital platforms</span></div>
+      <div><strong>Scale</strong><span>Millions of monthly users</span></div>
+    </div>
+  </div>
+</header>
+
+<section>
+<div class="wrap">
+<h2>Flagship case studies</h2>
+<p class="section-lead">These stories are designed to show both sides of the capability: building genuinely AI-native systems and engineering reliable software for real-world environments.</p>
+
+<article class="case">
+<div class="num">01 · AI DECISION SYSTEMS</div>
+<h3>Smart Partner — Building a Trustworthy AI Decision Engine</h3>
+<div class="meta">Enterprise / Consulting · AI Engineering · RAG · Decision Systems · Agentic Workflows</div>
+<div class="grid">
+<div>
+<h4>The challenge</h4>
+<p>Enterprise expertise is often distributed across people, processes and internal knowledge. The goal was to turn that expertise into a repeatable AI-assisted diagnostic and recommendation workflow.</p>
+<h4>The solution</h4>
+<p>We designed a hybrid architecture where AI helps understand and communicate the problem, while the application controls diagnostic state, retrieval, ranking, confidence and stopping rules.</p>
+<h4>Business value</h4>
+<p>The pattern can be applied to consulting, support, sales qualification, compliance, internal knowledge and other workflows where expert knowledge needs to scale.</p>
+<div class="quote">Your experts already know how to solve the problem. We can turn that expertise into an AI system that can scale.</div>
+</div>
+<div>
+<h4>Architecture</h4>
+<pre>User describes problem
+        ↓
+Diagnostic Engine
+        ↓
+Targeted questions
+        ↓
+Structured state
+        ↓
+RAG / Retrieval
+        ↓
+Deterministic ranking
+        ↓
+AI explanation
+        ↓
+Recommendation</pre>
+<h4>Engineering highlights</h4>
+<ul><li>Dynamic discovery instead of a fixed questionnaire</li><li>Persistent diagnostic state</li><li>Information-gain based targeting</li><li>Structured knowledge corpus</li><li>Confidence gates and stopping rules</li><li>Deterministic fallback behaviour</li></ul>
+</div>
+</div>
+</article>
+
+<article class="case">
+<div class="num">02 · VOICE AI</div>
+<h3>BolBill — Turning Voice Into Business Operations</h3>
+<div class="meta">SMB / Fintech · Voice AI · Mobile · LLM Integration · Workflow Automation</div>
+<div class="grid">
+<div>
+<h4>The challenge</h4>
+<p>Business software often forces users to type information into forms. We explored a voice-first billing workflow where users describe a transaction naturally and AI converts it into structured business data.</p>
+<h4>The solution</h4>
+<p>Speech recognition, language-model processing and a mobile application are combined into a workflow that extracts intent and entities and turns them into structured transactions.</p>
+<h4>Business value</h4>
+<p>The same architecture can support field sales, logistics, inventory, field service, CRM, delivery and expense workflows.</p>
+<div class="quote">If your employees spend their day filling out forms, AI can turn that work into a conversation.</div>
+</div>
+<div>
+<h4>Architecture</h4>
+<pre>Natural speech
+      ↓
+Speech-to-text
+      ↓
+Intent detection
+      ↓
+Entity extraction
+      ↓
+Structured transaction
+      ↓
+Business application</pre>
+<h4>Engineering highlights</h4>
+<ul><li>Voice-first mobile experience</li><li>Speech-to-text integration</li><li>LLM-powered intent extraction</li><li>Structured output validation</li><li>Audio processing</li><li>Multilingual / code-switched input considerations</li></ul>
+</div>
+</div>
+</article>
+
+<article class="case">
+<div class="num">03 · AI-NATIVE UX</div>
+<h3>Generative UI Assistant — From Natural Language to Working Interfaces</h3>
+<div class="meta">Enterprise Software · Generative AI · RAG · React · AI-native UX</div>
+<div class="grid">
+<div>
+<h4>The challenge</h4>
+<p>Complex enterprise applications expose users to dashboards, forms and workflows. We explored an AI-native interface where users describe what they need in natural language instead of navigating the application's structure.</p>
+<h4>The solution</h4>
+<p>The AI interprets the request and produces a structured application schema. React remains responsible for rendering and application behaviour.</p>
+<h4>Business value</h4>
+<p>This pattern can simplify analytics platforms, SaaS products, internal tools, reporting systems and enterprise workflows.</p>
+<div class="quote">We don't just add a chatbot to your software. We can make your software itself AI-native.</div>
+</div>
+<div>
+<h4>Architecture</h4>
+<pre>Natural language
+       ↓
+AI interpretation
+       ↓
+Structured schema
+       ↓
+React renderer
+       ↓
+UI / Output</pre>
+<h4>Capabilities</h4>
+<ul><li>Natural-language interaction</li><li>Structured AI outputs</li><li>Schema-driven UI</li><li>Streaming responses</li><li>RAG</li><li>Dynamic data presentation</li><li>PDF / PowerPoint / CSV / PNG outputs</li></ul>
+</div>
+</div>
+</article>
+
+<article class="case">
+<div class="num">04 · PUBLIC SECTOR</div>
+<h3>UAE Research Map — Building a Digital Research Ecosystem</h3>
+<div class="meta">Advanced Technology Research Council, UAE · Government / Research · React · Headless CMS · Data Integration</div>
+<div class="grid">
+<div>
+<h4>The challenge</h4>
+<p>Research information is distributed across institutions and organizations. The goal was to provide a centralized digital experience for discovering and interacting with the UAE research ecosystem.</p>
+<h4>The solution</h4>
+<p>We developed a modern API-driven frontend experience around structured research information and a headless CMS architecture.</p>
+<h4>Business value</h4>
+<p>The platform demonstrates experience turning complex institutional information into a simple, discoverable digital experience.</p>
+<div class="quote">We build digital platforms where complex information needs to become simple for the people using it.</div>
+</div>
+<div>
+<h4>Architecture</h4>
+<pre>Users
+  ↓
+React Application
+  ↓
+API / Data Layer
+  ↓
+Headless CMS
+  ↓
+Research Ecosystem Data</pre>
+<h4>Engineering highlights</h4>
+<ul><li>React / TypeScript</li><li>API-driven architecture</li><li>Headless CMS integration</li><li>Complex data presentation</li><li>Search and discovery workflows</li><li>Responsive public-facing experience</li></ul>
+</div>
+</div>
+</article>
+
+<article class="case">
+<div class="num">05 · GOVERNMENT DATA PLATFORM</div>
+<h3>Telangana Groundwater Platform — Turning Complex Data Into Actionable Workflows</h3>
+<div class="meta">Telangana Ground Water Department · Government · Data Platforms · Dashboards · Workflow Applications</div>
+<div class="grid">
+<div>
+<h4>The challenge</h4>
+<p>Groundwater management combines geographic information, monitoring data, assessments, regulatory workflows and public-facing services.</p>
+<h4>The solution</h4>
+<p>We worked on a web platform that brings complex environmental information and operational workflows together into an accessible digital experience.</p>
+<h4>Business value</h4>
+<p>The project demonstrates experience building applications where data supports real-world government processes and decisions.</p>
+<div class="quote">We turn complex operational data into software that people can actually use.</div>
+</div>
+<div>
+<h4>Platform model</h4>
+<pre>Government / Environmental Data
+              ↓
+        Backend Services
+              ↓
+       Web Application
+              ↓
+ Citizens / Businesses / Officials</pre>
+<h4>Engineering highlights</h4>
+<ul><li>React-based interfaces</li><li>Data-heavy dashboards</li><li>API integration</li><li>Complex domain workflows</li><li>Government/public-sector requirements</li><li>Environmental data visualization</li></ul>
+</div>
+</div>
+</article>
+
+<article class="case">
+<div class="num">06 · CLIENT CONFIDENTIAL</div>
+<h3>High-Traffic Digital Publishing Platform</h3>
+<div class="meta">Client Confidential · Digital Media & Publishing · Product Engineering · Web · Video · Advertising · Data</div>
+<div class="grid">
+<div>
+<h4>The challenge</h4>
+<p>A large digital publisher needed to continuously evolve a high-traffic platform while maintaining performance across content, video, advertising, subscriptions and analytics.</p>
+<h4>What we worked on</h4>
+<p>Our engineering work spans React and TypeScript experiences, Node.js services, CMS integrations, video, advertising infrastructure, subscription/login-wall workflows, BigQuery/dbt pipelines, CI/CD and production reliability.</p>
+<h4>Scale</h4>
+<p><strong>Millions of monthly users.</strong> The platform operates in a public, high-traffic environment where seemingly small frontend changes can interact with video, advertising, analytics and performance systems.</p>
+<div class="quote">AI-native development is more valuable when it's backed by engineers who understand production software at scale.</div>
+</div>
+<div>
+<h4>Engineering surface</h4>
+<pre>Frontend
+  React · TypeScript
+        ↓
+APIs / CMS / Services
+        ↓
+Video · Advertising
+        ↓
+Subscriptions
+        ↓
+Analytics / BigQuery / dbt
+        ↓
+CI/CD · Production Reliability</pre>
+<h4>Selected areas</h4>
+<ul><li>Web platform engineering</li><li>Video experiences</li><li>Advertising and monetization</li><li>Subscription/login-wall integrations</li><li>Analytics and data pipelines</li><li>Production debugging and reliability</li></ul>
+</div>
+</div>
+</article>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2>What can we build for you?</h2>
+<p class="section-lead">The projects above translate into a set of practical AI and product-engineering services.</p>
+<div class="services">
+<div class="service"><h3>AI Knowledge Systems</h3><p>Turn internal documents, processes and expertise into AI-powered knowledge and decision systems.</p><div class="tags">Support · Consulting · Compliance · Sales · Operations</div></div>
+<div class="service"><h3>AI Workflow Automation</h3><p>Identify repetitive work in existing software and replace manual steps with AI-powered workflows.</p><div class="tags">Documents · Invoices · Claims · CRM · Back office</div></div>
+<div class="service"><h3>Voice AI</h3><p>Turn conversations into structured actions inside existing business systems.</p><div class="tags">Field teams · Sales · Logistics · Service businesses</div></div>
+<div class="service"><h3>AI-native Applications</h3><p>Build software where natural language becomes a new way of interacting with the product.</p><div class="tags">Analytics · SaaS · Dashboards · Internal tools</div></div>
+<div class="service"><h3>AI Agents & Tool-Using Systems</h3><p>Build AI systems that can reason over business information and safely interact with APIs and tools.</p><div class="tags">Research · Operations · Support · Automation</div></div>
+<div class="service"><h3>AI Product Modernization</h3><p>Analyze an existing application and identify where AI can remove manual work, improve UX or automate decisions.</p><div class="tags">Existing SaaS · Web apps · Internal platforms</div></div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+<div class="cta">
+<div class="eyebrow" style="color:#9eb2ff">AI opportunity assessment</div>
+<h2>Not sure where AI fits into your product?</h2>
+<p>We can analyze an existing application or business workflow, identify practical AI opportunities and prototype the highest-potential one.</p>
+</div>
+</div>
+</footer>
+</body>
+</html>
